@@ -8,9 +8,9 @@ describe("Greet", () => {
     expect(textElement).toBeInTheDocument();
   });
 
-  test("Greeting to Prashil", () => {
-    render(<Greet name="Prashil" />);
-    const textElement = screen.getByText("Hello Prashil");
-    expect(textElement).toBeInTheDocument();
-  });
+  // test("Greeting to Prashil", () => {
+  //   render(<Greet name="Prashil" />);
+  //   const textElement = screen.getByText("Hello Prashil");
+  //   expect(textElement).toBeInTheDocument();
+  // });
 });
