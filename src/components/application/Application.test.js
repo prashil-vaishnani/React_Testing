@@ -5,6 +5,7 @@ describe("Application", () => {
   test("rander correctly", () => {
     render(<Application />);
 
+    /* heading test case */
     const heading = screen.getByRole("heading", {
       name: "Job description Form",
     });
@@ -20,6 +21,8 @@ describe("Application", () => {
     });
     expect(sectionHeading).toBeInTheDocument();
 
+    /* getByRole with Options */
+
     const nameElement = screen.getByRole("textbox", {
       name: "Name",
     });
@@ -30,6 +33,19 @@ describe("Application", () => {
     });
     expect(bioElement).toBeInTheDocument();
 
+    /* getByLabelText with Options textcase */
+    const termsElement2 = screen.getByLabelText("Name", {
+      selector: "input",
+    });
+    expect(termsElement2).toBeInTheDocument();
+
+    /* getByLabelText textcase */
+    const nameElement2 = screen.getByLabelText("Name", {
+      selector: "select",
+    });
+    expect(nameElement2).toBeInTheDocument();
+
+    /*getByRole without options */
     const jobLocationElement = screen.getByRole("combobox");
     expect(jobLocationElement).toBeInTheDocument();
 
