@@ -3,10 +3,17 @@ export const Application = () => {
     <>
       <h1>Job description Form</h1>
       <h2>section 1</h2>
+      <img src="" alt="image with 4k resolution" />
       <form>
         <div>
           <label htmlFor="name">Name</label>
-          <input id="name" type="text" placeholder="Full Name" />
+          <input
+            id="name"
+            type="text"
+            placeholder="Full Name"
+            value="prashil"
+            onChange={() => {}}
+          />
         </div>
         <p>All fields are mandatory</p>
         <div>

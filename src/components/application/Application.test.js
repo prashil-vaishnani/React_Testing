@@ -28,8 +28,16 @@ describe("Application", () => {
     /*getByText */
     const paragraphElement = screen.getByText(/ fields /i);
     expect(paragraphElement).toBeInTheDocument();
-    /* getByRole with Options */
 
+    /*getByDisplayValue */
+    const displayElement = screen.getByDisplayValue("prashil");
+    expect(displayElement).toBeInTheDocument();
+
+    /*getByAltText */
+    const imageElement = screen.getByAltText("image with 4k resolution");
+    expect(imageElement).toBeInTheDocument();
+
+    /* getByRole with Options */
     const nameElement = screen.getByRole("textbox", {
       name: "Name",
     });
