@@ -6,8 +6,9 @@ export const Application = () => {
       <form>
         <div>
           <label htmlFor="name">Name</label>
-          <input id="name" type="text" />
+          <input id="name" type="text" placeholder="Full Name" />
         </div>
+        <p>All fields are mandatory</p>
         <div>
           <label htmlFor="bio">Bio</label>
           <textarea id="bio" name="bio" />

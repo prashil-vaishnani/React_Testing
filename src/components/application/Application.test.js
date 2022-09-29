@@ -21,6 +21,13 @@ describe("Application", () => {
     });
     expect(sectionHeading).toBeInTheDocument();
 
+    /*getByPlaceHolderText */
+    const placeholderNameElement = screen.getByPlaceholderText("Full Name");
+    expect(placeholderNameElement).toBeInTheDocument();
+
+    /*getByText */
+    const paragraphElement = screen.getByText(/ fields /i);
+    expect(paragraphElement).toBeInTheDocument();
     /* getByRole with Options */
 
     const nameElement = screen.getByRole("textbox", {
