@@ -3,7 +3,9 @@ export const Application = () => {
     <>
       <h1>Job description Form</h1>
       <h2>section 1</h2>
+      <span title="close">X</span>
       <img src="" alt="image with 4k resolution" />
+      <div data-testid="custom-element">Custom HTML Element</div>
       <form>
         <div>
           <label htmlFor="name">Name</label>

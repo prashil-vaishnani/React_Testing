@@ -33,9 +33,17 @@ describe("Application", () => {
     const displayElement = screen.getByDisplayValue("prashil");
     expect(displayElement).toBeInTheDocument();
 
+    /*getByTitle */
+    const titleElement = screen.getByTitle("close");
+    expect(titleElement).toBeInTheDocument();
+
     /*getByAltText */
     const imageElement = screen.getByAltText("image with 4k resolution");
     expect(imageElement).toBeInTheDocument();
+
+    /* getByTestId*/
+    const customElement = screen.getByTestId("custom-element");
+    expect(customElement).toBeInTheDocument();
 
     /* getByRole with Options */
     const nameElement = screen.getByRole("textbox", {
