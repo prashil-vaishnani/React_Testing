@@ -32,4 +32,18 @@ describe("skill", () => {
     });
     expect(startButton).not.toBeInTheDocument();
   });
+  test("render start Button after timeout", async () => {
+    render(<Skill skills={skills} />);
+
+    const startButton = await screen.findByRole(
+      "button",
+      {
+        name: "start",
+      },
+      {
+        timeout: 503,
+      }
+    );
+    expect(startButton).toBeInTheDocument();
+  });
 });

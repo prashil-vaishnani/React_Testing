@@ -1,7 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 export const Skill = ({ skills }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoggedIn(true);
+    }, 500);
+  }, []);
   return (
     <>
       <ul>
