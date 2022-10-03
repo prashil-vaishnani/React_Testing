@@ -76,4 +76,22 @@ describe("Counter", () => {
     const headingValue = screen.getByRole("heading");
     expect(headingValue).toHaveTextContent("30");
   });
+
+  /*on tab button focus*/
+  test("element are foccas in right order", async () => {
+    user.setup();
+    render(<Counter />);
+    const amountButton = screen.getByRole("spinbutton");
+    const setAmountButton = screen.getByRole("button", {
+      name: "set",
+    });
+    const incrementButton = screen.getByRole("button", { name: "+" });
+
+    await user.tab();
+    expect(incrementButton).toHaveFocus();
+    await user.tab();
+    expect(amountButton).toHaveFocus();
+    await user.tab();
+    expect(setAmountButton).toHaveFocus();
+  });
 });
