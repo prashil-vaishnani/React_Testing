@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import { Application } from "./components/application/Application";
 import { Skill } from "./components/skills/Skill";
+import { Counter } from "./components/counter/Counter";
 
 function App() {
   const skills = ["html", "css", "react"];
@@ -13,6 +14,9 @@ function App() {
       <p>--------------------------------------------------</p>
       <div>
         <Skill skills={skills} />
+      </div>
+      <div>
+        <Counter />
       </div>
     </div>
   );
