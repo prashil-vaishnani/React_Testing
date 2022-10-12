@@ -67,7 +67,7 @@ describe("Application", () => {
     expect(displayElement).toBeInTheDocument();
 
     /*getByAltText */
-    const imageElement = screen.getByAltText("image with 4k resolution");
+    const imageElement = screen.getByAltText("with 4k resolution");
     expect(imageElement).toBeInTheDocument();
 
     /*getByTitle */
